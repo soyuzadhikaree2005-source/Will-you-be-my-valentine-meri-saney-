@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #ffcce6);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+.heart {
+  position: absolute;
+  font-size: 30px;
+}
+
+.photo {
+  position: fixed;
+  top: -120px;
+  width: 120px;
+  border-radius: 15px;
+  animation-name: fall;
+  animation-timing-function: ease-in;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes fall {
+  0% {
+    top: -120px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    top: 110vh;
+    opacity: 0.9;
+  }
+}
+
+@keyframes photoFall {
+  from { top: -150px; }
+  to { top: 100vh; }
+}
+
+

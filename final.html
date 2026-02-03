@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Valentine</title>
+<style>
+  /* Page background and container */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ffc1c1, #ffdee1);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #e60073;
+    margin-bottom: 30px;
+  }
+
+  /* Final photo styling + animation */
+  .final-photo {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+}
+  }
+
+  /* YES button */
+  #yesBtn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+
+  #yesBtn:hover {
+    transform: scale(1.1);
+    background-color: #ff6699;
+  }
+</style>
+</head>
+<body>
+  <h1>Will you be my Valentine? 💕</h1>
+  
+  <!-- Singular photo -->
+  <img src="photofinal.png" alt="My Valentine" class="final-photo">
+
+  <!-- YES button -->
+  <button id="yesBtn">YES 💖</button>
+
+  <script>
+    // YES button click action
+    document.getElementById("yesBtn").onclick = () => {
+      alert("Best decision ever. I love you so much 💘");
+    };
+  </script>
+</body>
+<script src="heartrain.js"></script>
+
+</html>

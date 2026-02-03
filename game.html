@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch the hearts</title>
+  <!-- Link your existing CSS -->
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+<h1>Mero mutu samata tw meri vuntuuu 💖</h1>
+<p id="timer">Time: 30</p>
+<p id="score">Hearts: 0</p>
+
+<!-- OK button that appears after the game -->
+<button id="okBtn" style="display:none;">
+  Hehe I love you so so so so so muchhhh.. click heree 💘
+</button>
+
+<!-- Background music -->
+<audio id="bgMusic" preload="auto" loop>
+  <source src="love1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Link your existing JS -->
+<script src="game.js"></script>
+
+<!-- Play music on first click -->
+<script>
+document.addEventListener("click", () => {
+  const bgMusic = document.getElementById("bgMusic");
+  bgMusic.volume = 0.6;
+  bgMusic.play().catch(() => {});
+}, { once: true });
+
+// Redirect to message.html when OK button is clicked
+document.getElementById("okBtn").addEventListener("click", () => {
+  window.location.href = "message.html";
+});
+</script>
+
+</body>
+</html>
